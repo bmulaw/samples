@@ -4,13 +4,14 @@ import GetSamplesListOnSpotify from "./search/GetSamplesListOnSpotify";
 export default function DisplaySamples({currPlayingTrack, setCurrPlayingTrack, samples, code}) {    
     const [samplesList, setSamplesList] = useState([])
     const [displaySamples, setDisplaySamples] = useState(false);
-    const [samplesToDisplay, setSamplesToDisplay] = useState([]);
 
     useEffect(() => {
-        let spotifySongData = GetSamplesListOnSpotify(samples, code)
-        spotifySongData.then(data => {
-            setSamplesList(data);
-        })
+        if (samples.length) {
+            let spotifySongData = GetSamplesListOnSpotify(samples, code)
+            spotifySongData.then(data => {
+                setSamplesList(data);
+            })
+        } else {setSamplesList([])}
     }, [samples])
 
     const handleClick = () => {
@@ -20,16 +21,6 @@ export default function DisplaySamples({currPlayingTrack, setCurrPlayingTrack, s
     const handleChangeMusic = (newSong) => {
         setCurrPlayingTrack(newSong);
     }
-
-    useEffect(() => {
-        if(displaySamples && samplesList.length>0)  {
-            setSamplesToDisplay(samplesList.map(song => {
-                return song.title + " by " + song.artist;
-            }));
-        } else {
-            setSamplesToDisplay([]);
-        }
-    }, [displaySamples])
 
     useEffect(() =>{
         if (displaySamples) handleClick();

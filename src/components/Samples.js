@@ -27,7 +27,7 @@ export default function Samples( playingTrack ) {
             for (let j = 0; j < relations[i].songs.length; j++) {
                 let type = relations[i].relationship_type;
                 let songName = relations[i].songs[j].title.replace('The ', '').replace(/\([^()]*\)/g, '').toLowerCase();
-                let artist = relations[i].songs[j].artist_names.toLowerCase();
+                let artist = relations[i].songs[j].artist_names.replace(/\([^()]*\)/g, '').toLowerCase();                
                 if (artist.includes("&")) artist = artist.substring(0, artist.indexOf('&'));
                 songSamples.push("0^x" + type + "0^y" + artist + " " + songName);
             }
