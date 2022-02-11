@@ -28,4 +28,4 @@ The app will ask you to sign in to Spotify and you can then search a song you wa
 1. Bjoern Hasemann (Engineer)
 2. Della Lin (Engineer)
 3. Gagan Kang (Engineer)
-4. Web Dev Simplified (Engineer/YouTuber)[!](https://www.youtube.com/watch?v=Xcet6msf3eE&ab_channel=WebDevSimplified)
+4. [Web Dev Simplified (Engineer/YouTuber)](https://www.youtube.com/watch?v=Xcet6msf3eE&ab_channel=WebDevSimplified)
