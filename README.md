@@ -15,7 +15,7 @@ Anytime you listen to a song on Spotify and you want to see its samples, click t
 ## To get the app running:
 
 1. make sure you have node.js installed (https://nodejs.org/en/)
-2. git clone the Samples repo https://github.com/bmulaw/samples (will require environment variables - contact me for that)
+2. git clone this repo (will require environment variables - contact me for that)
 3. cd into client folder and run `npm install` in terminal to install all dependencies.
 4. in the same client folder, run `npm start`
 
