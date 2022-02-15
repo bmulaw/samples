@@ -13,13 +13,14 @@ export default function SearchSamplesOnSpotify(searchSampledSong, code) {
                                                searchSampledSong.indexOf('0^y'));
         searchSampledSong = searchSampledSong.substring(searchSampledSong.indexOf('0^y')+3, 
                                                         searchSampledSong.length)
+        searchSampledSong = searchSampledSong.replace("’", "").replace(",","");
         spotifyApi.searchTracks(searchSampledSong)
         .then(res => {
             let song = res.body.tracks.items[0];
             if (song) {
                 let songName = song.name.replace('The ', '')
                     .replace('-', '').replace(/\([^()]*\)/g, '')
-                    .replace("'", '').toLowerCase();
+                    .replace("'", '').trim().toLowerCase();
                 if (searchSampledSong.includes(songName) || songName.includes(searchSampledSong)) {
                     resolve({"title": song.name,
                             "artist": song.artists[0].name,

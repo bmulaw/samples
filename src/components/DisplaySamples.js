@@ -33,7 +33,7 @@ export default function DisplaySamples({currPlayingTrack, setCurrPlayingTrack, s
             <button style={{width: "100%"}} onClick={() => handleClick()}>{!displaySamples?"Click for Samples":"Hide Samples"}</button>
             <br></br><br></br>
           
-            {samplesList.length >0 && displaySamples ?
+            {(samples.length >0 || samplesList.length >0) && displaySamples ?
                 samplesList.map((song,index) => {
                 return (
                 <div key={index} className="d-flex m-2 align-items-center" style={{ overflowY: "auto" , cursor: "pointer"}} onClick={() => handleChangeMusic(song)}>
