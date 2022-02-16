@@ -4,11 +4,11 @@ import GetSongIdFromGenuis from './search/GetSongIdFromGenuis';
 export default function Samples( playingTrack ) {    
     if (playingTrack === 'undefined undefined') return;
     let songTitle = playingTrack.title.replace(/\([^()]*\)/g, '');
-    let currentPlayingMusic = (songTitle + " " + playingTrack.artist).replace(":", "");
+    let currentPlayingMusic = songTitle + " " + playingTrack.artist;
     let sampledSongs;
 
     const getCorrectSongId = (data) => {
-        if (data.length == 0) return;
+        if (data.length === 0) return;
         let index = 0;
         for (let i = 0; i < data.length; i++) {
             if (data[i].result.title.includes(songTitle)
