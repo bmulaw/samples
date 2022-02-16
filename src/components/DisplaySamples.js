@@ -6,13 +6,17 @@ export default function DisplaySamples({currPlayingTrack, setCurrPlayingTrack, s
     const [displaySamples, setDisplaySamples] = useState(false);
 
     useEffect(() => {
-        if (samples.length) {
+        if (samples.length > 0) {
             let spotifySongData = GetSamplesListOnSpotify(samples, code)
             spotifySongData.then(data => {
                 setSamplesList(data);
             })
         } else {setSamplesList([])}
     }, [samples, code])
+
+    useEffect(() =>{
+        if (displaySamples) handleClick();
+    }, [currPlayingTrack])
 
     const handleClick = () => {
         setDisplaySamples(!displaySamples);
@@ -21,11 +25,6 @@ export default function DisplaySamples({currPlayingTrack, setCurrPlayingTrack, s
     const handleChangeMusic = (newSong) => {
         setCurrPlayingTrack(newSong);
     }
-
-    useEffect(() =>{
-        if (displaySamples) handleClick();
-    }, [currPlayingTrack])
-
 
     return (
         <div>  

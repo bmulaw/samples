@@ -1,5 +1,6 @@
 import env from "react-dotenv";
 import SpotifyWebApi from 'spotify-web-api-node';
+const stringSimilarity = require("string-similarity");
 
 const spotifyApi = new SpotifyWebApi({
     clientId: env.CLIENT_ID
@@ -18,10 +19,11 @@ export default function SearchSamplesOnSpotify(searchSampledSong, code) {
         .then(res => {
             let song = res.body.tracks.items[0];
             if (song) {
-                let songName = song.name.replace('The ', '')
+                let songName = song.name.replace('The ', '').replace(',', '')
                     .replace('-', '').replace(/\([^()]*\)/g, '')
                     .replace("'", '').trim().toLowerCase();
-                if (searchSampledSong.includes(songName) || songName.includes(searchSampledSong)) {
+                const similarityScore = stringSimilarity.compareTwoStrings(songName, searchSampledSong);
+                if (similarityScore > 0.45) {
                     resolve({"title": song.name,
                             "artist": song.artists[0].name,
                              "uri": song.uri,
