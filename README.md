@@ -1,6 +1,6 @@
 # The frontend code of an app that lets you play the samples of any song on Spotify
 
-### Tech Stack: React
+### Tech Stack: React, Node, Express
 APIs: Spotify and Genuis
 Backend is hosted on Heroku and Frontend is to be hosted on GitHub Pages
 
