@@ -15,12 +15,18 @@ Anytime you listen to a song on Spotify and you want to see its samples, click t
 ## To get the app running:
 
 1. make sure you have node.js installed (https://nodejs.org/en/)
+
+## set up environment
 2. git clone this repo
 3. create a .env file in the root directory (same directory as the gitignore)
+
+## set up config
 4. go to [spotify developer](https://developer.spotify.com/dashboard/login) and create an app
 5. copy your client id and paste it in the .env file with a variable name `CLIENT_ID`
 6. go to [genius api website](https://genius.com/api-clients), create an app with the website url/redirect uri as http://locahlost:3000
 7. copy the client secret and paste in the .env file with a variable name `API_KEY`
+
+## run the app
 8. run `npm install` in terminal to install all dependencies.
 8. run `npm start`
 
