@@ -5,6 +5,7 @@ export default function Samples( playingTrack ) {
     if (playingTrack === 'undefined undefined') return;
     let songTitle = playingTrack.title.replace(/\([^()]*\)/g, '');
     let currentPlayingMusic = songTitle + " " + playingTrack.artist;
+    if (currentPlayingMusic.includes("-")) currentPlayingMusic = currentPlayingMusic.substring(0, currentPlayingMusic.indexOf('-'));
     let sampledSongs;
 
     const getCorrectSongId = (data) => {

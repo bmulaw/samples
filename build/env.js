@@ -13,7 +13,7 @@ window.env = {
   "CONDA_PROMPT_MODIFIER": "(base) ",
   "TERM_PROGRAM_VERSION": "443",
   "COLOR": "1",
-  "TERM_SESSION_ID": "19772B67-091B-4867-B543-EE3BE6D033B0",
+  "TERM_SESSION_ID": "69773C67-00F7-4DE3-89DC-69463001C0B8",
   "npm_config_noproxy": "",
   "npm_config_local_prefix": "/Users/bernard/Desktop/samples",
   "USER": "bernard",

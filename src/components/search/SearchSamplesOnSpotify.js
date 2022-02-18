@@ -22,8 +22,9 @@ export default function SearchSamplesOnSpotify(searchSampledSong, code) {
                 let songName = song.name.replace('The ', '').replace(',', '')
                     .replace('-', '').replace(/\([^()]*\)/g, '')
                     .replace("'", '').trim().toLowerCase();
-                const similarityScore = stringSimilarity.compareTwoStrings(songName, searchSampledSong);
-                if (similarityScore > 0.45) {
+                    if (songName.includes("-")) songName = songName.substring(0, songName.indexOf('-'));
+                    const similarityScore = stringSimilarity.compareTwoStrings(songName, searchSampledSong);
+                    if (similarityScore > 0.4) {
                     resolve({"title": song.name,
                             "artist": song.artists[0].name,
                              "uri": song.uri,
