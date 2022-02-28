@@ -1,5 +1,7 @@
 # The frontend code of an app that lets you play the samples of any song on Spotify
 
+# URL = https://samplesonspotify.netlify.app/
+
 ### Tech Stack: React, Node, Express
 APIs: Spotify and Genuis
 Backend is hosted on Heroku and Frontend is to be hosted on GitHub Pages
