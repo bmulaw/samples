@@ -1,5 +1,7 @@
 # The frontend code of an app that lets you play the samples of any song on Spotify
 
+## URL = https://samplesonspotify.netlify.app/
+
 ### Tech Stack: React, Node, Express
 APIs: Spotify and Genuis
 Backend is hosted on Heroku and Frontend is to be hosted on GitHub Pages
@@ -35,8 +37,4 @@ Will require having a Spotify account.
 The app will ask you to sign in to Spotify and you can then search a song you want to listen to. Once you play that song, click on "Show Samples Below" button and the samples should show up on the page and you can then play them. You can click the same button "Hide Samples" to not display the Samples.
 
 
-## Credits:
-1. Bjoern Hasemann (Engineer)
-2. Della Lin (Engineer)
-3. Gagan Kang (Engineer)
-4. [Web Dev Simplified (Engineer/YouTuber)](https://www.youtube.com/watch?v=Xcet6msf3eE&ab_channel=WebDevSimplified)
+Inspired by: [Web Dev Simplified (Engineer/YouTuber)](https://www.youtube.com/watch?v=Xcet6msf3eE&ab_channel=WebDevSimplified)
