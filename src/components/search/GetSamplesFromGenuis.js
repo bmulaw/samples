@@ -8,7 +8,7 @@ export default function GetSamplesFromGenuis (songId) {
         url: 'https://genius.p.rapidapi.com/songs/' + songId,
         headers: {
             'x-rapidapi-host': 'genius.p.rapidapi.com',
-            'x-rapidapi-key': env.API_KEY
+            'x-rapidapi-key': env.REACT_APP_API_KEY
         }
     };
     return axios.request(options);

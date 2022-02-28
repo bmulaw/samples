@@ -9,7 +9,7 @@ export default function GetSongIdFromGenuis(currentPlayingMusic) {
         params: {q: currentPlayingMusic},
         headers: {
             'x-rapidapi-host': 'genius.p.rapidapi.com',
-            'x-rapidapi-key': env.API_KEY
+            'x-rapidapi-key': env.REACT_APP_API_KEY
         }
     };
     

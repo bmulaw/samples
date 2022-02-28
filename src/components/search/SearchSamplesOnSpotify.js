@@ -3,7 +3,7 @@ import SpotifyWebApi from 'spotify-web-api-node';
 const stringSimilarity = require("string-similarity");
 
 const spotifyApi = new SpotifyWebApi({
-    clientId: env.CLIENT_ID
+    clientId: env.REACT_APP_CLIENT_ID
 })
 
 export default function SearchSamplesOnSpotify(searchSampledSong, code) {
